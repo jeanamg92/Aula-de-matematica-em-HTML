@@ -1,0 +1,81 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../js/atvScriptsPage21.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page20.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page21.css" />
+    <link rel="stylesheet" href="../css/atvDefault.css" />
+
+
+</head>
+
+<div class="presentation-area">
+    <div class="subTituloAtv">ATIVIDADE: Associar informações</div>
+    <div class="tituloEnunciado">
+        <div class="circuloEnunciado">2</div>
+        <div class="textoEnunciado"> Em seguida, serão apresentadas alguns problemas matemáticos. Clique no sinal correspondente ao problema e depois selecione a resposta correta. </div>
+    </div>
+    <div class="quadradoVerdeAtv Part2" id="quadradoVerdeAtvPart2">
+        <label for="" class="enunciadoQuadradoVerde" id="enunciadoQuadradoVerde"> Zeca está colecionando camisas de times de futebol. Ele tinha 42 camisas. Depois de participar de um torneio, conseguiu mais 18 e para incentivá-lo, seu pai lhe deu mais 15. Quantas camisas Zeca tem ao todo.</label>
+        <div id="nextStepAtv1" class="setinhaQuadradoVerde next naoMostra" onclick="nextStepAtv(3);">
+            <div class="camadaBranca">
+                <div class="camadaVerde">
+                    <div class="setinha"></div>
+                </div>
+            </div>
+        </div>
+        <div id="previouStepAtv1" class="setinhaQuadradoVerdeEsquerda" onclick="previousStepAtv(1);">
+            <div class="camadaBranca">
+                <div class="camadaVerde">
+                    <div class="setinhaEsquerda"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tudo flexColumn">
+            <img src="../img/errou.png" alt="" class="errou naoMostra" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertou">
+            <div alt="" class="" id="parabens"> </div>
+            <div class="row fonteOp" id="rowOp">
+                <div class="operadorAtv" id="correto">+<img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="-">-<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="×">×<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="÷">÷<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+            </div>
+
+            <div id="alternativas" style="color: transparent;" class="alternativasAtv content bottom-outscreen-translated">
+                <div id="correto" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+                    75
+                </div>
+
+                <div id="9" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro">
+                    </div>
+                    9
+                </div>
+
+                <div id="11.240" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    11.240
+                </div>
+
+                <div id="35" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    35
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- game -->
+<script type="text/javascript" src="../js/scripts.js"></script>
+<script type="text/javascript" src="../js/atvScriptsPage21.js"></script>
+<script type="text/javascript" src="../js/DragDropTouch.js"></script>

@@ -1,31 +1,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page2.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page2.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page2.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">ADIÇÃO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+    <div class="quadradoVerde">
+        <div class="operacao">ADIÇÃO</div>
+
+        <div class="click-texto opFonte">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction maisFont"> + </div>
-    </div>
+            <div id='text1' style="color: transparent;" class="content left-outscreen-translated noInteraction"> + </div>
+        </div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text2')">
             <img src="../img/setaVerde.png" alt="" srcset="">
         </button>
-        <div id='text2' class="content left-outscreen-translated noInteraction"> Operação com o objetivo de somar (+), ou seja, ela agrupa dois números que, ao somarmos, tornam-se apenas um. </div>
-    </div>
+            <div id='text2' style="color: transparent;" class="content left-outscreen-translated noInteraction"> Operação com o objetivo de somar (+), ou seja, ela agrupa dois números que, ao somarmos, tornam-se apenas um. </div>
+        </div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text3').classList.remove('left-outscreen-translated');">
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text3')">
             <img src="../img/setaVerde.png" alt="" srcset="">
         </button>
-        <div id='text3' class="content left-outscreen-translated noInteraction"> É possível obter através dela a contagem real de tudo o que possuímos, em tempo presente até que ocorra variação de dados. </div>
-    </div>
-</div>
+            <div id='text3' style="color: transparent;" class="content left-outscreen-translated noInteraction"> É possível obter através dela a contagem real de tudo o que possuímos, em tempo presente até que ocorra variação de dados. </div>
+            <script>
+            </script>

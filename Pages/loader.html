@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" />
+  <meta name="apple-mobile-web-app-capable" content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+  <!-- <meta name="viewport" content="width=device-width, minimal-ui"> -->
+  <title>Loader</title>
+  <style>
+    body {
+      overflow: hidden!important;
+    }
+    
+    .overlay {
+      background-color: black;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      transform: scale(1);
+      z-index: 8000;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      color: white;
+    }
+    
+    .progress {
+      top: 50%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay">
+    <progress id="files" value="0" max="100"> 0% </progress>
+  </div>
+  <button id="goFS">Go fullscreen</button>
+  <script>
+    var goFS = document.getElementById("goFS");
+    goFS.addEventListener("click", function() {
+      document.body.requestFullscreen();
+    }, false);
+  </script>
+  <script>
+    if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+      /* iOS hides Safari address bar */
+      window.addEventListener("load", function() {
+        setTimeout(function() {
+          window.scrollTo(0, 1);
+        }, 1000);
+      });
+    }
+    var pages = [
+      'part2page21.html',
+      'part3page21.html',
+      'part4page21.html',
+    ];
+
+    for (var i = 1; i <= 28; i++) {
+      pages.push('page' + i + '.html');
+    }
+
+    var total = pages.length;
+    var carregados = 0;
+
+    // const rootAdd = ''
+    // for (var i = 1; i <= pages.length; i++) {
+    //   pages[i] = rootAdd + pages[i];
+    // }
+
+    function AtualizaBarra() {
+
+      var porcentagem = Math.ceil((carregados / total) * 100);
+      document.getElementById('files').setAttribute('value', porcentagem);
+      // document.getElementById('files').innerHTML = porcentagem
+      // console.log(porcentagem)
+    }
+
+    const limite = 5;
+    var naFila = 0;
+    var indicesCarregados = [];
+
+    const Precarregar = (pages, indice) => {
+      nextIndex++;
+      naFila++;
+      const page = pages[indice]
+      const newIframe = document.createElement('iframe');
+      newIframe.setAttribute('referrerpolicy', "same-origin")
+      document.querySelector('body').appendChild(newIframe);
+      newIframe.onload = () => {
+        indicesCarregados.push(indice)
+
+        newIframe.parentElement.removeChild(newIframe);
+
+        carregados++;
+        AtualizaBarra();
+
+        naFila--
+
+      }
+      newIframe.src = page;
+
+      if (naFila < limite && nextIndex < pages.length) {
+        Precarregar(pages, nextIndex);
+      }
+    }
+
+    Precarregar(pages, 0)
+
+    var nextIndex = 0;
+    setInterval(() => {
+      if ((indicesCarregados.indexOf(nextIndex) == -1) && naFila < limite && nextIndex < pages.length) {
+        Precarregar(pages, nextIndex);
+      } else if (nextIndex == pages.length) {
+        onAcabou();
+        nextIndex++;
+      }
+    }, 100)
+
+    const onAcabou = () => {
+      window.location = 'principal.html';
+    }
+    window.scrollTo(0, 1)
+  </script>
+</body>
+
+</html>

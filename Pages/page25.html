@@ -1,0 +1,164 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../js/atvScriptsPage24.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page25.css" as="style" />
+    <link rel="preload" href="../img/fundo.jpg" as="image">
+    <link rel="preload" href="../img/bgatv.jpg" as="image">
+
+    <link rel="preload" href="../img/parabens.png" as="image">
+    <link rel="preload" href="../img/acertou.png" as="image">
+    <link rel="preload" href="../img/errou.png" as="image">
+
+    <link rel="preload" href="../img/carro3.png" as="image">
+    <link rel="preload" href="../img/carro2.png" as="image">
+    <link rel="preload" href="../img/carro1.png" as="image">
+    <link rel="preload" href="../img/montanha.png" as="image">
+    <link rel="preload" href="../img/rua.png" as="image">
+    <link rel="preload" href="../img/nuvem1.png" as="image">
+    <link rel="preload" href="../img/nuvem2.png" as="image">
+    <link rel="preload" href="../img/nuvem3.png" as="image">
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page25.css" />
+    <link rel="stylesheet" href="../css/atvDefault.css" />
+
+
+</head>
+
+<div class="presentation-area">
+    <div class="subTituloAtv">ATIVIDADE: Resolver Operações</div>
+    <div class="tituloEnunciado">
+        <div class="circuloEnunciado">5</div>
+        <div class="textoEnunciado"> Observe a operação que aparece no canto superior da tela. Clique no Kart que representa a resolução correta.</div>
+    </div>
+    <img src="../img/errou.png" alt="" class="errou naoMostra imagemResultado" id="errou">
+    <img src="../img/acertou.png" alt="" class="acertou naoMostra imagemResultado" id="acertou">
+
+    <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed;  transform: translate(-50%, -50%); ">
+        <style scoped>
+            .spritesheet-animation {
+                width: 300px;
+                height: 300px;
+                background-image: url("../img/parabens.png");
+                animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+            }
+            
+            .hidden {
+                display: none!important;
+            }
+            
+            @keyframes playX {
+                from {
+                    background-position-x: 0px;
+                }
+                to {
+                    background-position-x: -1500px;
+                }
+            }
+            
+            @keyframes playY {
+                from {
+                    background-position-y: 0px;
+                }
+                to {
+                    background-position-y: -5100px;
+                }
+            }
+        </style>
+        <audio preload="automatic" id="SFX-parabens" muted>
+          <source src="../audio/parabens.mp3" type="audio/mp3" />
+        </audio>
+        <div class='spritesheet-animation'>
+
+        </div>
+    </div>
+    <div class="" style="flex-direction: column;">
+        <img src="../img/errou.png" alt="" class="errou naoMostra imagemResultado" id="errou">
+        <img src="../img/acertou.png" alt="" class="acertou naoMostra imagemResultado" id="acertou">
+        <!-- <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed;  transform: translate(-50%, -50%); ">
+                <style scoped>
+                    .spritesheet-animation {
+                        width: 300px;
+                        height: 300px;
+                        background-image: url("../img/parabens.png");
+                        animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+                    }
+                    
+                    .hidden {
+                        display: none!important;
+                    }
+                    
+                    @keyframes playX {
+                        from {
+                            background-position-x: 0px;
+                        }
+                        to {
+                            background-position-x: -1500px;
+                        }
+                    }
+                    
+                    @keyframes playY {
+                        from {
+                            background-position-y: 0px;
+                        }
+                        to {
+                            background-position-y: -5100px;
+                        }
+                    }
+                </style>
+                <audio preload="automatic" id="SFX-parabens" muted>
+                  <source src="../audio/parabens.mp3" type="audio/mp3" />
+                </audio>
+                <div class='spritesheet-animation'>
+
+                </div>
+            </div> -->
+    </div>
+
+    <div class="nuvem nv1" id="nuvem"></div>
+    <div class="nuvem nv2" id="nuvem"></div>
+    <div class="nuvem nv3" id="nuvem"></div>
+
+    <div class="nuvem nv4" id="nuvem"></div>
+    <div class="nuvem nv5" id="nuvem"></div>
+    <div class="nuvem nv6" id="nuvem"></div>
+    <img id="montanha" src="../img/montanha.png" alt="" srcset="">
+    <div class="calculo" id="calculo"> 210 ÷ 2</div>
+    <div class="rua">
+        <div class="sliding-background">
+
+        </div>
+    </div>
+    <div class="carro carro1" id="kart1" correto="nao">
+        <div class="bandeira">110</div>
+        <img id="carro1" src="../img/carro1.png" alt="" srcset="">
+    </div>
+    <div class="carro carro2" id="kart2" correto="sim">
+        <div class="bandeira">105</div>
+        <img id="carro2" src="../img/carro2.png" alt="" srcset="">
+    </div>
+    <div class="carro carro3" id="kart3" correto="nao">
+        <div class="bandeira">75</div>
+        <img id="carro3" src="../img/carro3.png" alt="" srcset="">
+    </div>
+
+    <!-- <img id="rua" src="../img/rua.png" alt="" srcset=""> -->
+
+</div>
+
+<!-- <div class="btnCalc calculo">CALCULADORA</div>
+<div class="container">
+
+</div> -->
+
+
+<!-- game -->
+<script type="text/javascript" src="../js/scripts.js"></script>
+<script type="text/javascript" src="../js/atvScriptsPage25.js"></script>
+<script type="text/javascript" src="../js/DragDropTouch.js"></script>
+<!-- <script type="text/javascript" src="../js/calc.js"></script> -->

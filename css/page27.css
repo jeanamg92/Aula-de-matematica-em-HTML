@@ -1,0 +1,129 @@
+    /* body {
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+        font-family: sans-serif;
+        color: white;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-image: url("../img/bgatv.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .tudo {
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    } */
+    
+    .coluna {
+        /* width: 33%; */
+        height: 100%;
+        /* background-color: white; */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+    }
+    
+    .fonteOp {
+        font-size: 15vh;
+        cursor: pointer;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
+    
+    .operador {
+        /* width: 100%;
+    height: 100%; */
+        /* align-items: center;
+    justify-content: center; */
+        cursor: pointer;
+    }
+    
+    .calculoAtv {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    .quadradoOp {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 4vh;
+        width: 9vh;
+        height: 8vh;
+        background-color: transparent;
+        border: 0.7vh solid rgb(164, 214, 133);
+        border-radius: 10px;
+        margin: 10px;
+    }
+    
+    .borda {
+        border: 0.8vh solid rgb(164, 214, 133);
+    }
+    
+    .meio {
+        width: 15%;
+        height: 100%;
+        /* background-color: white; */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+    }
+    
+    .numeros {
+        display: flex;
+        flex-direction: inherit;
+        width: 35%;
+        justify-content: center;
+    }
+    
+    .calculos {
+        display: flex;
+        width: 65%;
+        justify-content: space-around;
+    }

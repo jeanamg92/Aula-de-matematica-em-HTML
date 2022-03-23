@@ -1,35 +1,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page11.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page11.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page11.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">PROPRIEDADES DA MULTIPLICAÇÃO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+    <div class="quadradoVerde">
+        <div class="operacao">PROPRIEDADES DA MULTIPLICAÇÃO</div>
+
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction calculosPai">
-            <div class="tipo">Comutatividade</div>
-            <div class="enunciado">Garante que, em uma multiplicação, a ordem dos fatores não altera o produto.</div>
-            <div class="calculos">
-                <div class="linha">
-                    <div class="conta">9 x 3 = 27</div>
-                    <div class="conta">5 x 4 = 20</div>
+            <div id='text1' style="color: transparent;" class="content left-outscreen-translated noInteraction calculosPai">
+                <div class="tipo">Comutatividade</div>
+                <div class="enunciado">Garante que, em uma multiplicação, a ordem dos fatores não altera o produto.</div>
+                <div class="calculos">
+                    <div class="linha">
+                        <div class="conta">9 x 3 = 27</div>
+                        <div class="conta">5 x 4 = 20</div>
+                    </div>
+                    <div class="linha">
+                        <div class="conta">3 x 9 = 27</div>
+                        <div class="conta">4 x 5 = 20</div>
+                    </div>
                 </div>
-                <div class="linha">
-                    <div class="conta">3 x 9 = 27</div>
-                    <div class="conta">4 x 5 = 20</div>
+                <div class="enunciado">Na multiplicação, podemos trocar os fatores de posição que o resultado da multiplicação será sempre o mesmo, não importa qual número queremos multiplicar primeiro. Por exemplo, se quisermos multiplicar quatro números, podemos escolher
+                    a ordem que preferimos que o resultado nunca mudará.</div>
+                <div class="calculoCenter">
+                    1 x 2 x 3 x 4 = 24<br> 2 x 3 x 4 x 1 = 24<br> 3 x 4 x 1 x 2 = 24<br> 4 x 2 x 3 x 1 = 24<br>
                 </div>
             </div>
-            <div class="enunciado">Na multiplicação, podemos trocar os fatores de posição que o resultado da multiplicação será sempre o mesmo, não importa qual número queremos multiplicar primeiro. Por exemplo, se quisermos multiplicar quatro números, podemos escolher a ordem
-                que preferimos que o resultado nunca mudará.</div>
-            <div class="calculoCenter">
-                1 x 2 x 3 x 4 = 24<br> 2 x 3 x 4 x 1 = 24<br> 3 x 4 x 1 x 2 = 24<br> 4 x 2 x 3 x 1 = 24<br>
-            </div>
-        </div>
-    </div>
-</div>
+            <script>
+            </script>

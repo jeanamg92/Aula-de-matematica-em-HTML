@@ -1,73 +1,96 @@
-body {
-    align-items: baseline;
-    font-family: sans-serif;
-    color: white;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 
 .presentation-area {
     font-size: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     width: 100%;
     height: 100%;
     /* margin: auto; */
 }
 
-.operacao {
-    font-weight: bold;
-    font-size: 36px;
-    color: white;
-    padding: 26px;
-    padding-bottom: 0px;
+.tudo {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    margin: auto;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: row;
+    -ms-flex: row;
+    flex: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
-.presentation-area .click-texto {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.presentation-area button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
+.tamanhaoCOlunas {
+    width: 34%;
+    height: 100%;
 }
 
 .parcela {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 56px;
-    font-weight: bold;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
 }
 
-.parcela2 {
+.colunaTextos {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    align-items: center;
-    font-size: 56px;
+    font-size: 122px;
     font-weight: bold;
+    color: white;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    background-color: red;
 }
 
-.fracao .coluna {
+.colunaTextosSetas {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    font-weight: bold;
-    font-size: 56px;
-    justify-content: right;
-    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    /* white-space: pre-line; */
 }
 
-.linha {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.colunaLastTexto {
+    /* background-color: green; */
+}
+
+.invisivel {
+    width: 100%;
+    background-color: salmon;
+    height: 10%;
 }
 
 button {
@@ -77,12 +100,13 @@ button {
     cursor: pointer;
 }
 
-.click-texto button img {
-    width: 50px;
-}
-
 .calculosPai {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     height: 100%;
@@ -99,24 +123,33 @@ button {
     margin-bottom: 10px;
 }
 
-.calculosPai .calculos {
+
+/* .calculosPai .calculos {
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-}
+} */
 
 .calculosPai .calculos .linha {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .textoSeta {
     font-size: 18px;
-}
-
-.maisFont {
-    font-size: 74px;
 }
 
 .presentation-area .click-texto .click-anim svg {
@@ -125,27 +158,40 @@ button {
     height: auto;
 }
 
-.content {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transition: all ease-out 0.7s;
-    transition: all ease-out 0.7s;
-    padding: 12px;
-}
-
 .left-outscreen-translated {
-    -webkit-transform: translateX(-300%) !important;
-    transform: translateX(-300%) !important;
+    -webkit-transform: translateX(-50%) !important;
+    transform: translateX(-50%) !important;
+    z-index: -1;
+    color: rgba(0, 0, 0, 0);
 }
 
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
-    .presentation-area {
+    /* .presentation-area {
         font-size: 16px;
     }
-    .operacao {
-        font-size: 22px;
-    }
     .click-texto button img {
-        width: 40px;
+        width: 32px;
     }
+    .colunaFracoes {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 90px;
+    }
+    .click-texto img {
+        width: 32px;
+    }
+    .content {
+        font-size: 18px;
+    }
+    .parcelaSeta2 {
+        height: 27%;
+    }
+    .invisivel {
+        width: 100%;
+        height: calc(70% - 2px);
+    }
+    .colunaTextosSetas {
+        white-space: nowrap;
+    } */
 }

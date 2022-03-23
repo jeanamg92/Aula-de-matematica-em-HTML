@@ -1,97 +1,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page5.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page5.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page5.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">ELEMENTOS DA ADIÇÃO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <!-- <div class="parcela1">10</div>
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
-            <img src="../img/setaVerde.png" alt="" srcset="">
-        </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction calculosPai"> 1ª Parcela
-        </div>
-    </div>
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
-            <img src="../img/setaVerde.png" alt="" srcset="">
-        </button>
-        <div id='text2' class="content left-outscreen-translated noInteraction calculosPai"> Importante: Para facilitar a realização de uma adição, o número maior deve ocupar a primeira parcela.
-        </div>
-    </div>
+    <div class="quadradoVerde">
+        <div class="operacao">ELEMENTOS DA ADIÇÃO</div>
 
+        <div class="tudo">
 
-    <div class="parcela2">+ 2</div>
-    <div class="travessao">_____________</div>
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text3').classList.remove('left-outscreen-translated');">
-            <img src="../img/setaVerde.png" alt="" srcset="">
-        </button>
-        <div id='text3' class="content left-outscreen-translated noInteraction calculosPai">2ª Parcela
-        </div>
-    </div>
+            <div class="colunaFracoes tamanhaoCOlunas">
+                <div class="parcela parcela1">10</div>
+                <div class="parcela parcela2">+ 2</div>
+                <div class="parcela travessao"></div>
+                <div class="parcela total">12</div>
+            </div>
 
-    <div class="total">12</div>
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text4').classList.remove('left-outscreen-translated');">
-            <img src="../img/setaVerde.png" alt="" srcset="">
-        </button>
-        <div id='text4' class="content left-outscreen-translated noInteraction calculosPai">Soma ou Total
-        </div>
-    </div> -->
-
-    <div class="fracao">
-        <div class="coluna">
-            <div class="linha">
-                <div class="parcela">10</div>
-                <div class="click-texto">
-                    <button class="click-anim" type='button' onclick="document.getElementById('text3').classList.remove('left-outscreen-translated');">
+            <div class="colunaTextosSetas tamanhaoCOlunas">
+                <div class="parcelaSetas">
+                    <div class="click-texto">
+                        <button class="click-anim" type='button' onclick="retiraClasse('text1')">
                     <img src="../img/setaVerde.png" alt="" srcset="">
                 </button>
-                    <div id='text3' class="content left-outscreen-translated noInteraction textoSeta">1ª Parcela
+                        <div id='text1' style="color: transparent;" class="content left-outscreen-translated noInteraction">1ª Parcela </div>
                     </div>
                 </div>
-
-                <div class="click-texto">
-                    <button class="click-anim" type='button' onclick="document.getElementById('text4').classList.remove('left-outscreen-translated');">
+                <div class="parcelaSetas parcelaSeta2">
+                    <div class="click-texto">
+                        <button class="click-anim" type='button' onclick="retiraClasse('text2')">
                     <img src="../img/setaVerde.png" alt="" srcset="">
                 </button>
-                    <div id='text4' class="content left-outscreen-translated noInteraction textoSeta"><b>Importante:</b> Para facilitar a realização de uma adição, o número maior deve ocupar a primeira parcela.
+                        <div id='text2' style="color: transparent;" class="content left-outscreen-translated noInteraction">2ª Parcela </div>
+                    </div>
+                </div>
+                <div class="parcelaSetas">
+                    <div class="click-texto">
+                        <button class="click-anim" type='button' onclick="retiraClasse('text3')">
+                    <img src="../img/setaVerde.png" alt="" srcset="">
+                </button>
+                        <div id='text3' style="color: transparent;" class="content left-outscreen-translated noInteraction"> Soma ou Total </div>
                     </div>
                 </div>
             </div>
-
-            <div class="linha">
-                <div class="parcela2">+ 2
-                    <div class="linha">_____</div>
-                </div>
-
+            <div class="colunaLastTexto tamanhaoCOlunas">
                 <div class="click-texto">
-                    <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
-                    <img src="../img/setaVerde.png" alt="" srcset="">
-                </button>
-                    <div id='text2' class="content left-outscreen-translated noInteraction textoSeta">2ª Parcela
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="linha">
-                <div class="parcela">12</div>
-                <div class="click-texto">
-                    <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
-                    <img src="../img/setaVerde.png" alt="" srcset="">
-                </button>
-                    <div id='text1' class="content left-outscreen-translated noInteraction textoSeta">Soma ou Total
-                    </div>
+                    <button class="click-anim" type='button' onclick="retiraClasse('text4')">
+                <img src="../img/setaVerde.png" alt="" srcset="">
+            </button>
+                    <div id='text4' style="color: transparent;" class="content left-outscreen-translated noInteraction"><b>Importante:</b> Para facilitar a realização de uma adição, o número maior deve ocupar a primeira parcela. </div>
                 </div>
             </div>
-
-        </div>
-    </div>
-
-</div>
+            <script>
+            </script>

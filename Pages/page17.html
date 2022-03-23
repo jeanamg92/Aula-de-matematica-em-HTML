@@ -1,32 +1,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page17.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page17.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page17.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">PROPRIEDADES DA DIVISÃO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+    <div class="quadradoVerde">
+        <div class="operacao">PROPRIEDADES DA DIVISÃO</div>
+
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction calculosPai">
-            <div class="tipo">Fechamento</div>
-            <div class="enunciado">Esta propriedade não é satisfeita pela divisão, pois, por exemplo, 1 dividido por 2 não pertence ao conjunto dos números naturais.</div>
+            <div id='text1' style="color: transparent;" class="content left-outscreen-translated noInteraction calculosPai">
+                <div class="tipo">Fechamento</div>
+                <div class="enunciado">Esta propriedade não é satisfeita pela divisão, pois, por exemplo, 1 dividido por 2 não pertence ao conjunto dos números naturais.</div>
+            </div>
         </div>
-    </div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text2')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text2' class="content left-outscreen-translated noInteraction calculosPai">
-            <div class="tipo">Associatividade</div>
-            <div class="enunciado">Esta propriedade não é satisfeita, pois (<b>15 ÷ 5</b>) ÷ <b>3</b> é diferente de <b>(3 ÷ 5) ÷ 15</b>, por exemplo.</div>
-        </div>
-    </div>
-</div>
+            <div id='text2' style="color: transparent;" class="content left-outscreen-translated noInteraction calculosPai">
+                <div class="tipo">Associatividade</div>
+                <div class="enunciado">Esta propriedade não é satisfeita, pois (<b>15 ÷ 5</b>) ÷ <b>3</b> é diferente de <b>(3 ÷ 5) ÷ 15</b>, por exemplo.</div>
+            </div>
+            <script>
+            </script>
 
-</div>
+        </div>

@@ -1,42 +1,9 @@
-body {
-    align-items: baseline;
-    font-family: sans-serif;
-    color: white;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-.presentation-area {
-    font-size: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
-}
-
-.operacao {
-    font-weight: bold;
-    font-size: 36px;
-    color: white;
-    padding: 26px;
-    padding-bottom: 0px;
-}
-
-.presentation-area .click-texto {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.presentation-area button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 
 button {
     background-color: transparent;
@@ -45,50 +12,61 @@ button {
     cursor: pointer;
 }
 
-.click-texto button img {
-    width: 50px;
+.quadradoVerde {
+    font-size: 3.3vh !important;
 }
 
 .calculosPai {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     height: 100%;
 }
 
-.calculosPai .tipo {
-    float: left;
-    margin-bottom: 25px;
-    font-weight: bold;
-}
-
-.calculosPai .enunciado {
-    float: left;
-    margin-bottom: 25px;
-}
-
 .calculosPai .calculos {
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .calculosPai .calculos .linha {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
 .calculoCenter {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-}
-
-.maisFont {
-    font-size: 74px;
 }
 
 .presentation-area .click-texto .click-anim svg {
@@ -97,27 +75,8 @@ button {
     height: auto;
 }
 
-.content {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    -webkit-transition: all ease-out 0.7s;
-    transition: all ease-out 0.7s;
-    padding: 12px;
-}
-
-.left-outscreen-translated {
-    -webkit-transform: translateX(-300%) !important;
-    transform: translateX(-300%) !important;
-}
-
 @media screen and (max-device-width: 1440px) and (max-device-height: 900px) {
     .presentation-area {
         font-size: 16px;
-    }
-    .operacao {
-        font-size: 22px;
-    }
-    .click-texto button img {
-        width: 40px;
     }
 }

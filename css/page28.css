@@ -1,0 +1,347 @@
+.tudo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around !important;
+}
+
+.bola {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 100px;
+    border: 0.5vh solid white;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.bola:hover {
+    background-color: rgba(95, 95, 95, 1);
+    transition-duration: 0.6s;
+}
+
+.coluna {
+    width: calc(90% / 8);
+    height: 100%;
+    /* background-color: ivory; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bola0 {
+    position: absolute;
+    left: 1.4%;
+    top: 44.5%;
+}
+
+.bola1P {
+    position: absolute;
+    left: 16.4%;
+    top: 44.5%;
+}
+
+.bola2P {
+    position: absolute;
+    left: 29%;
+    top: 24.5%;
+}
+
+.bola3P {
+    position: absolute;
+    left: 29%;
+    top: 44.5%;
+}
+
+.bola4P {
+    position: absolute;
+    left: 29%;
+    top: 64.5%;
+}
+
+.bola5P {
+    position: absolute;
+    left: 41.4%;
+    top: 2.5%;
+}
+
+.bola6P {
+    position: absolute;
+    left: 41.4%;
+    top: 44.5%;
+}
+
+.bola7P {
+    position: absolute;
+    left: 41.4%;
+    top: 86%;
+}
+
+.bola8P {
+    position: absolute;
+    left: 54%;
+    top: 24.5%;
+}
+
+.bola9P {
+    position: absolute;
+    left: 54%;
+    top: 64.5%;
+}
+
+.bola10P {
+    position: absolute;
+    left: 66.4%;
+    top: 44.5%;
+}
+
+.bola11P {
+    position: absolute;
+    left: 79%;
+    top: 17%;
+}
+
+.bola12P {
+    position: absolute;
+    left: 79%;
+    top: 44.5%;
+}
+
+.bola13P {
+    position: absolute;
+    left: 79%;
+    top: 72.5%;
+}
+
+.coluna1 {
+    height: 50%;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.coluna2 {
+    height: 69%;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.coluna3 {
+    justify-content: space-around;
+}
+
+.bolaFinal {
+    font-size: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    width: 9vh;
+    height: 9vh;
+    border: 0.6vh solid rgb(164, 214, 133);
+    background-color: rgb(117, 191, 66);
+    border-radius: 90px;
+    z-index: 999;
+}
+
+.bolaFinal:hover {
+    background-color: rgba(15, 155, 27, 1);
+    transition-duration: 1s;
+}
+
+.bolaAnda {
+    font-size: 3.25vh;
+    position: absolute;
+    left: 1.4%;
+    top: 44.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 7.5vh;
+    height: 7.5vh;
+    border: 0.6vh solid rgb(164, 214, 133);
+    background-color: rgb(117, 191, 66);
+    border-radius: 90px;
+    transform-origin: center center;
+    transition: ease 1s all;
+    z-index: 999;
+}
+
+.around {
+    justify-content: space-around;
+}
+
+#bola1 {
+    /* pointer-events: auto !important; */
+}
+
+.imagemResultado {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    top: 26% !important;
+    left: 79% !important;
+}
+
+.calculo {
+    display: flex;
+    position: absolute;
+    left: 3%;
+    bottom: 5%;
+    font-size: 4vh;
+    width: 16%;
+    height: 13%;
+    border: 0.6vh solid rgb(164, 214, 133);
+    border-radius: 16px;
+    background-color: rgba(0, 121, 10, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    margin: auto;
+    margin-top: 0.6vh;
+    margin-bottom: 0;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.calculo:hover {
+    background-color: rgba(15, 155, 27, 0.9);
+    transition-duration: 1s;
+}
+
+.calculo svg {
+    width: 4vh;
+    fill: white;
+    color: white;
+}
+
+.botaoPisca {
+    animation: pisca 1s ease infinite;
+}
+
+@keyframes pisca {
+    0% {
+        background-color: rgba(15, 155, 27, 0.9);
+    }
+    50% {
+        background-color: rgba(0, 121, 10, 0.9);
+    }
+    100% {
+        background-color: rgba(15, 155, 27, 0.9);
+    }
+}
+
+.linha {
+    height: 2vh;
+    width: 5vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    transform: rotateZ(0deg);
+    /* transform-origin: 8% 100%; */
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.linha1 {
+    left: 2%;
+    top: 50%;
+    width: 74vw;
+}
+
+.linha2 {
+    left: 19%;
+    top: 50%;
+    width: 25vw;
+    transform: translateY(-50%) rotate(-35deg);
+}
+
+.linha3 {
+    left: 19%;
+    top: 50%;
+    width: 24vw;
+    transform: translateY(-50%) rotate(36deg);
+}
+
+.linha4 {
+    left: 32%;
+    top: 31%;
+    width: 23vw;
+    transform: translateY(-50%) rotate(34deg);
+}
+
+.linha5 {
+    left: 45%;
+    top: 10%;
+    width: 24vw;
+    transform: translateY(-50%) rotate(34deg);
+}
+
+.linha6 {
+    left: 69%;
+    top: 50%;
+    width: 14vw;
+    transform: translateY(-50%) rotate(44deg);
+}
+
+.linha7 {
+    left: 81%;
+    top: 23%;
+    width: 14vw;
+    transform: translateY(-50%) rotate(136deg);
+}
+
+.linha8 {
+    left: 70%;
+    top: 50%;
+    width: 25vw;
+    transform: translateY(-50%) rotate(146deg);
+}
+
+.linha9 {
+    left: 57%;
+    top: 31%;
+    width: 24.5vw;
+    transform: translateY(-50%) rotate(147deg);
+}
+
+.linha10 {
+    left: 81%;
+    top: 78%;
+    width: 29vw;
+    transform: translateY(-50%) rotate(171deg);
+}
+
+.linha11 {
+    left: 81%;
+    top: 23%;
+    width: 29vw;
+    transform: translateY(-50%) rotate(190deg);
+}
+
+.linha12 {
+    left: 94%;
+    top: 49%;
+    width: 14vw;
+    transform: translateY(-50%) rotate(222deg);
+}
+
+.linha13 {
+    left: 92%;
+    top: 55%;
+    width: 12vw;
+    transform: translateY(-50%) rotate(136deg);
+}

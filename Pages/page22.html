@@ -1,0 +1,162 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="../js/scripts.js" as="script">
+  <link rel="preload" href="../js/atvScriptsPage22.js" as="script">
+  <link rel="preload" href="../css/canvasDefault.css" as="style" />
+  <link rel="preload" href="../css/default.css" as="style" />
+  <link rel="preload" href="../css/page22.css" as="style" />
+  <link rel="preload" href="../img/fundo.jpg" as="image">
+  <link rel="preload" href="../img/bgatv.jpg" as="image">
+  <link rel="preload" href="../img/parabens.png" as="image">
+  <link rel="preload" href="../img/acertou.png" as="image">
+  <link rel="preload" href="../img/errou.png" as="image">
+
+  <link rel="stylesheet" href="../css/canvasDefault.css" />
+  <link rel="stylesheet" href="../css/default.css" />
+  <link rel="stylesheet" href="../css/page22.css" />
+  <link rel="stylesheet" href="../css/atvDefault.css" />
+
+
+</head>
+
+<div class="presentation-area">
+  <div class="subTituloAtv">ATIVIDADE: Identifique o Valor</div>
+  <div class="tituloEnunciado">
+    <div class="circuloEnunciado">3</div>
+    <div class="textoEnunciado"> Observe os quadros abaixo e clique na operação correspondente o valor em destaque</div>
+  </div>
+
+  <div class="quadradoVerdeAtv">
+    <div class="tudo">
+      <img src="../img/errou.png" alt="" class="errou naoMostra imagemResultado" id="errou">
+      <img src="../img/acertou.png" alt="" class="acertou naoMostra imagemResultado" id="acertou">
+      <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed;  transform: translate(-50%, -50%); ">
+        <style scoped>
+          .spritesheet-animation {
+            width: 300px;
+            height: 300px;
+            background-image: url("../img/parabens.png");
+            animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+          }
+          
+          .hidden {
+            display: none!important;
+          }
+          
+          @keyframes playX {
+            from {
+              background-position-x: 0px;
+            }
+            to {
+              background-position-x: -1500px;
+            }
+          }
+          
+          @keyframes playY {
+            from {
+              background-position-y: 0px;
+            }
+            to {
+              background-position-y: -5100px;
+            }
+          }
+        </style>
+        <audio preload="automatic" id="SFX-parabens" muted>
+                  <source src="../audio/parabens.mp3" type="audio/mp3" />
+                </audio>
+        <div class='spritesheet-animation'>
+
+        </div>
+      </div>
+
+
+      <div class="coluna">
+        <div class="quadrado">
+          <div class="colunaNumGrande">133</div>
+          <div class="colunaCalc">
+            <div class="calcEimagem">
+              <div class="calc">130 x 2</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro">
+            </div>
+
+            <div class="calcEimagem">
+              <div class="calc" id="correto">460 - 327</div><img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro">
+            </div>
+
+            <div class="calcEimagem">
+              <div class="calc">100 + 30</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+
+            <div class="calcEimagem">
+              <div class="calc lastCalc">83 + 49</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+
+          </div>
+        </div>
+
+        <div class="quadrado">
+          <div class="colunaNumGrande">575</div>
+          <div class="colunaCalc">
+            <div class="calcEimagem">
+              <div class="calc">2300 ÷ 4</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+
+            <div class="calcEimagem">
+              <div class="calc">300 + 425</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+
+            <div class="calcEimagem">
+              <div class="calc" id="correto">945 - 370</div><img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+
+            <div class="calcEimagem">
+              <div class="calc lastCalc">326 + 239</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="coluna">
+        <div class="quadrado">
+          <div class="colunaNumGrande">745</div>
+          <div class="colunaCalc">
+            <div class="calcEimagem">
+              <div class="calc" id="correto">420 + 325</div><img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+
+            <div class="calcEimagem">
+              <div class="calc">950 - 225</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+
+            <div class="calcEimagem">
+              <div class="calc">800 - 45</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+
+            <div class="calcEimagem">
+              <div class="calc lastCalc">2900 ÷ 4</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+
+          </div>
+        </div>
+
+        <div class="quadrado">
+          <div class="colunaNumGrande">100</div>
+          <div class="colunaCalc">
+            <div class="calcEimagem">
+              <div class="calc">23 x 14</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+
+            <div class="calcEimagem">
+              <div class="calc">460 - 327</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+
+            <div class="calcEimagem">
+              <div class="calc">80 + 30</div><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+
+            <div class="calcEimagem">
+              <div class="calc lastCalc" id="correto">300 ÷ 3</div><img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<!-- game -->
+<script type="text/javascript" src="../js/scripts.js"></script>
+<script type="text/javascript" src="../js/atvScriptsPage22.js"></script>
+<script type="text/javascript" src="../js/DragDropTouch.js"></script>

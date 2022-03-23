@@ -1,45 +1,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page3.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page3.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page3.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">PROPRIEDADES DA ADIÇÃO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+    <div class="quadradoVerde">
+        <div class="operacao">PROPRIEDADES DA ADIÇÃO</div>
+
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction calculosPai">
-            <div class="tipo">Comutatividade</div>
-            <div class="enunciado">Se mudarmos as parcelas de lugar, na adição, o resultado não se altera.</div>
-            <div class="calculos">
-                <div class="linha">
-                    <div class="conta">7 + 3 = 10</div>
-                    <div class="conta">5 + 4 = 9</div>
-                </div>
-                <div class="linha">
-                    <div class="conta">3 + 7 = 10</div>
-                    <div class="conta">4 + 5 = 9</div>
+            <div id='text1' style="color: transparent;" class="content left-outscreen-translated noInteraction calculosPai">
+                <div class="tipo">Comutatividade</div>
+                <div class="enunciado">Se mudarmos as parcelas de lugar, na adição, o resultado não se altera.</div>
+                <div class="calculos">
+                    <div class="linha">
+                        <div class="conta">7 + 3 = 10</div>
+                        <div class="conta">5 + 4 = 9</div>
+                    </div>
+                    <div class="linha">
+                        <div class="conta">3 + 7 = 10</div>
+                        <div class="conta">4 + 5 = 9</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text2')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text2' class="content left-outscreen-translated noInteraction calculosPai">
-            <div class="tipo">Associação</div>
-            <div class="enunciado">As parcelas, numa adição, podem ser somadas de maneiras diferentes, e o resultado não se altera.</div>
-            <div class="calculos">
-                <div class="conta">(5 + 2) + 6 = 7 + 6 = 13</div>
-                <div class="conta">5 + (2 + 6) = 5 + 8 = 13</div>
+            <div id='text2' style="color: transparent;" class="content left-outscreen-translated noInteraction calculosPai">
+                <div class="tipo">Associação</div>
+                <div class="enunciado">As parcelas, numa adição, podem ser somadas de maneiras diferentes, e o resultado não se altera.</div>
+                <div class="calculos">
+                    <div class="conta">(5 + 2) + 6 = 7 + 6 = 13</div>
+                    <div class="conta">5 + (2 + 6) = 5 + 8 = 13</div>
+                </div>
             </div>
-        </div>
-    </div>
-
-</div>
+            <script>
+            </script>

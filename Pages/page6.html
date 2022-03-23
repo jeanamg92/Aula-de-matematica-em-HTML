@@ -1,31 +1,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page6.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page6.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page6.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">SUBTRAÇÃO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+    <div class="quadradoVerde">
+        <div class="operacao">SUBTRAÇÃO</div>
+
+        <div class="click-texto opFonte">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction maisFont"> - </div>
-    </div>
+            <div id='text1' class="content left-outscreen-translated noInteraction "> - </div>
+        </div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text2')">
             <img src="../img/setaVerde.png" alt="" srcset="">
         </button>
-        <div id='text2' class="content left-outscreen-translated noInteraction"> Nela, pode-se calcular quanto será o valor real se removermos um valor que é chamado de <b>minuendo</b> de outro que é conhecido como <b>subtraendo</b>. </div>
-    </div>
+            <div id='text2' style="color: transparent;" class="content left-outscreen-translated noInteraction"> Nela, pode-se calcular quanto será o valor real se removermos um valor que é chamado de <b>minuendo</b> de outro que é conhecido como <b>subtraendo</b>. </div>
+        </div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text3').classList.remove('left-outscreen-translated');">
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text3')">
             <img src="../img/setaVerde.png" alt="" srcset="">
         </button>
-        <div id='text3' class="content left-outscreen-translated noInteraction"> Essa operação é simbolizada por <b>a - b = c</b>, ou seja, o <b>minuendo</b> menos o <b>subtraendo</b> é igual ao <b>restante</b> que sobra e também pode ser representada pelo sinal (-). </div>
-    </div>
-</div>
+            <div id='text3' style="color: transparent;" class="content left-outscreen-translated noInteraction"> Essa operação é simbolizada por <b>a - b = c</b>, ou seja, o <b>minuendo</b> menos o <b>subtraendo</b> é igual ao <b>restante</b> que sobra e também pode ser representada pelo sinal (-). </div>
+            <script>
+            </script>

@@ -1,29 +1,44 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page1.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page1.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page1.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
-
 <div class="presentation-area">
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
-        <img src="../img/setaVerde.png" alt="" srcset="">
-    </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction"> Podemos entender como <b>Matemática</b>, a ciência que pode ser calculada através do raciocínio rápido e lógico, sendo também abstrata por apresentar sempre um resultado fixo, sem variações. </div>
-    </div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
-            <img src="../img/setaVerde.png" alt="" srcset="">
-        </button>
-        <div id='text2' class="content left-outscreen-translated noInteraction"> Ela tem como base de estudos a quantidade, as grandezas, a extensão e as mudanças referentes aos cálculos. </div>
-    </div>
+    <div class="quadradoVerde">
+        <div class="click-texto">
+            <button class="click-anim" type="button" onclick="retiraClasse('text1');">
+        <img src="../img/setaVerde.png" alt="" srcset="" />
+      </button>
+            <div id="text1" style="color: transparent;" class="content left-outscreen-translated noInteraction">
+                Podemos entender como <b>Matemática</b>, a ciência que pode ser calculada através do raciocínio rápido e lógico, sendo também abstrata por apresentar sempre um resultado fixo, sem variações.
+            </div>
+        </div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text3').classList.remove('left-outscreen-translated');">
-            <img src="../img/setaVerde.png" alt="" srcset="">
-        </button>
-        <div id='text3' class="content left-outscreen-translated noInteraction"> Sempre marcou presença na vida do ser humano, desde os tempos antigos até os dias de hoje, porém, suas transformações são renovadas a cada dia, auxiliando assim cada vez mais o conhecimento envoldido. </div>
-    </div>
-</div>
+        <div class="click-texto">
+            <button class="click-anim" type="button" onclick="retiraClasse('text2');">
+        <img src="../img/setaVerde.png" alt="" srcset="" />
+      </button>
+            <div id="text2" style="color: transparent;" class="content left-outscreen-translated noInteraction">
+                Ela tem como base de estudos a quantidade, as grandezas, a extensão e as mudanças referentes aos cálculos.
+            </div>
+        </div>
+
+        <div class="click-texto">
+            <button class="click-anim" type="button" onclick="retiraClasse('text3');">
+        <img src="../img/setaVerde.png" alt="" srcset="" />
+      </button>
+            <div id="text3" style="color: transparent;" class="content left-outscreen-translated noInteraction">
+                Sempre marcou presença na vida do ser humano, desde os tempos antigos até os dias de hoje, porém, suas transformações são renovadas a cada dia, auxiliando assim cada vez mais o conhecimento envoldido.
+            </div>
+            <script>
+            </script>

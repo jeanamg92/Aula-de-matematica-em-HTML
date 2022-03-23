@@ -1,24 +1,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page12.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page12.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page12.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">PROPRIEDADES DA MULTIPLICAÇÃO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+    <div class="quadradoVerde">
+        <div class="operacao">PROPRIEDADES DA MULTIPLICAÇÃO</div>
+
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction calculosPai">
-            <div class="tipo">Elemento Neutro</div>
-            <div class="enunciado">A propriedade do elemento <b>neutro</b> garante que existe um número que, ao ser multiplicado por qualquer outro número, não altera. Isso mesmo, qualquer número multiplicado pelo elemento neutro não muda! Você sabe que número é esse? É o número
-                <b>1</b>! Por essa razão, o número <b>1</b> é conhecido como o <b>elemento neutro</b> da multiplicação.</div>
-            <div class="calculoCenter">
-                1 x 2 = 2<br>10 x 1 = 10<br>15 x 1 = 15<br>1 x 12.345 = 12.345<br>
+            <div id='text1' style="color: transparent;" class="content left-outscreen-translated noInteraction calculosPai">
+                <div class="tipo">Elemento Neutro</div>
+                <div class="enunciado">A propriedade do elemento <b>neutro</b> garante que existe um número que, ao ser multiplicado por qualquer outro número, não altera. Isso mesmo, qualquer número multiplicado pelo elemento neutro não muda! Você sabe que número é esse? É
+                    o número
+                    <b>1</b>! Por essa razão, o número <b>1</b> é conhecido como o <b>elemento neutro</b> da multiplicação.</div>
+                <div class="calculoCenter">
+                    1 x 2 = 2<br>10 x 1 = 10<br>15 x 1 = 15<br>1 x 12.345 = 12.345<br>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
+            <script>
+            </script>

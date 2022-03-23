@@ -1,38 +1,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page8.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page8.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page8.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">PROPRIEDADES DA SUBTRAÇÃO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+    <div class="quadradoVerde">
+        <div class="operacao">PROPRIEDADES DA SUBTRAÇÃO</div>
+
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction calculosPai">
-            <div class="tipo">Elemento Neutro</div>
-            <div class="calculos">
-                <div class="linha">
-                    <div class="conta">38 - 0 = 38</div>
-                    <div class="conta">0 - 38 = -38</div>
+            <div id='text1' style="color: transparent;" class="content left-outscreen-translated noInteraction calculosPai">
+                <div class="tipo">Elemento Neutro</div>
+                <div class="calculos">
+                    <div class="linha">
+                        <div class="conta">38 - 0 = 38</div>
+                        <div class="conta">0 - 38 = -38</div>
+                    </div>
+                    <div class="enunciado">-38 não pertence a IN, logo,<b>NÃO</b> existe esta propriedade.</div>
                 </div>
-                <div class="enunciado">-38 não pertence a IN, logo,<b>NÃO</b> existe esta propriedade.</div>
             </div>
         </div>
-    </div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text2')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text2' class="content left-outscreen-translated noInteraction calculosPai">
-            <div class="tipo">Fechamento</div>
-            <div class="enunciado">3 - 4 não pertence a IN, portante <b>NÃO</b> existe esta propriedade.</div>
+            <div id='text2' style="color: transparent;" class="content left-outscreen-translated noInteraction calculosPai">
+                <div class="tipo">Fechamento</div>
+                <div class="enunciado">3 - 4 não pertence a IN, portanto, <b>NÃO</b> existe esta propriedade.</div>
+            </div>
+            <script>
+            </script>
         </div>
-    </div>
-</div>
-
-</div>

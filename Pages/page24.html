@@ -1,0 +1,110 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="../js/scripts.js" as="script">
+  <link rel="preload" href="../js/atvScriptsPage24.js" as="script">
+  <link rel="preload" href="../css/canvasDefault.css" as="style" />
+  <link rel="preload" href="../css/default.css" as="style" />
+  <link rel="preload" href="../css/page24.css" as="style" />
+  <link rel="preload" href="../img/fundo.jpg" as="image">
+  <link rel="preload" href="../img/bgatv.jpg" as="image">
+
+  <link rel="preload" href="../img/parabens.png" as="image">
+  <link rel="preload" href="../img/acertou.png" as="image">
+  <link rel="preload" href="../img/errou.png" as="image">
+
+  <link rel="preload" href="../img/trenzinho.png" as="image">
+
+  <link rel="stylesheet" href="../css/canvasDefault.css" />
+  <link rel="stylesheet" href="../css/default.css" />
+  <link rel="stylesheet" href="../css/page24.css" />
+  <link rel="stylesheet" href="../css/atvDefault.css" />
+
+
+</head>
+
+<div class="presentation-area">
+  <div class="subTituloAtv">ATIVIDADE: Identificar as Propriedades das Operações</div>
+  <div class="tituloEnunciado">
+    <div class="circuloEnunciado">5</div>
+    <div class="textoEnunciado"> Observe as operações indicadas nos vagões, arraste até eles a classificação correta e faça o trenzinho andar.</div>
+  </div>
+
+  <div class="quadradoVerdeAtvPg24">
+    <div class="tudo" style="flex-direction: column;">
+      <img src="../img/errou.png" alt="" class="errou naoMostra imagemResultado" id="errou">
+      <img src="../img/acertou.png" alt="" class="acertou naoMostra imagemResultado" id="acertou">
+      <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed;  transform: translate(-50%, -50%); ">
+        <style scoped>
+          .spritesheet-animation {
+            width: 300px;
+            height: 300px;
+            background-image: url("../img/parabens.png");
+            animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+          }
+          
+          .hidden {
+            display: none!important;
+          }
+          
+          @keyframes playX {
+            from {
+              background-position-x: 0px;
+            }
+            to {
+              background-position-x: -1500px;
+            }
+          }
+          
+          @keyframes playY {
+            from {
+              background-position-y: 0px;
+            }
+            to {
+              background-position-y: -5100px;
+            }
+          }
+        </style>
+        <audio preload="automatic" id="SFX-parabens" muted>
+                  <source src="../audio/parabens.mp3" type="audio/mp3" />
+                </audio>
+        <div class='spritesheet-animation'>
+
+        </div>
+      </div>
+
+      <div class="linhaElementos">
+        <div class="quadradoElementos draggable" draggable="true" id="MultiplicacaoComutativa">Multiplicação Comutativa</div>
+        <div class="quadradoElementos draggable" draggable="true" id="MultiplicacaoElementoNulo">Multiplicação por Elemento Nulo</div>
+        <div class="quadradoElementos draggable" draggable="true" id="MultiplicacaoElementoNeutro">Multiplicação por Elemento Neutro</div>
+        <div class="quadradoElementos draggable" draggable="true" id="AdicaoComutativa">Adição Comutativa</div>
+        <div class="quadradoElementos draggable" draggable="true" id="AdicaoElementoNeutro">Adição por Elemento Neutro</div>
+        <div class="quadrado naoMostra" id=""></div>
+      </div>
+
+      <div style="transform: translateX(-65%); background-image: url('../img/trenzinho.png');" class="trenzinho content">
+
+        <div style="margin-left: 0;" class="content vagao dropable" id="MultiplicacaoElementoNulo"></div>
+        <div class="content vagao dropable" id="AdicaoElementoNeutro"></div>
+        <div class="content vagao dropable" id="MultiplicacaoElementoNeutro"></div>
+        <div class="content vagao dropable" id="MultiplicacaoComutativa"></div>
+        <div class="content vagao dropable" id="AdicaoComutativa"></div>
+
+
+        <!-- <div class="content left-outscreen-translated-trenzinho vagao dropable" id="MultiplicacaoComutativa">Multiplicação Comutativa</div> -->
+        <!-- <div class="content left-outscreen-translated-trenzinho vagao dropable" id="MultiplicacaoComutativa">Multiplicação Comutativa</div> -->
+        <!-- <div class="content left-outscreen-translated-trenzinho vagao dropable" id="MultiplicacaoComutativa">Multiplicação Comutativa</div> -->
+
+        <!-- <div class="quadradoElementos dropable" id="MultiplicacaoElementoNulo">Multiplicação por Elemento Nulo</div> -->
+        <!-- <div class="quadradoElementos dropable" id="MultiplicacaoElementoNeutro">Multiplicação por Elemento Neutro</div> -->
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- game -->
+<script type="text/javascript" src="../js/scripts.js"></script>
+<script type="text/javascript" src="../js/atvScriptsPage24.js"></script>
+<script type="text/javascript" src="../js/DragDropTouch.js"></script>

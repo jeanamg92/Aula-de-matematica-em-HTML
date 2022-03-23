@@ -1,23 +1,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page14.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page14.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page14.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">PROPRIEDADES DA MULTIPLICAÇÃO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+    <div class="quadradoVerde">
+        <div class="operacao">PROPRIEDADES DA MULTIPLICAÇÃO</div>
+
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction calculosPai">
-            <div class="tipo">Propriedade Associativa</div>
-            <div class="enunciado">Quando multiplicarmos três ou mais fatores, podemos escolher várias ordens para resolver a operação da multiplicação que o resultado será o mesmo. Vejamos de quais maneiras podemos resolver a multiplicação <b>3 x 5 x 7</b>.</div>
-            <div class="calculoCenter">
-                (3 x 5) x 7 = 15 x 7 = 105<br>3 x (5 x 7) = 3 x 35 = 105<br>5 x (3 x 7) = 5 x 21 = 105
+            <div id='text1' style="color: transparent;" class="content left-outscreen-translated noInteraction calculosPai">
+                <div class="tipo">Propriedade Associativa</div>
+                <div class="enunciado">Quando multiplicarmos três ou mais fatores, podemos escolher várias ordens para resolver a operação da multiplicação que o resultado será o mesmo. Vejamos de quais maneiras podemos resolver a multiplicação <b>3 x 5 x 7</b>.</div>
+                <div class="calculoCenter">
+                    (3 x 5) x 7 = 15 x 7 = 105<br>3 x (5 x 7) = 3 x 35 = 105<br>5 x (3 x 7) = 5 x 21 = 105
+                </div>
             </div>
-        </div>
-    </div>
-</div>
+            <script>
+            </script>

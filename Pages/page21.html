@@ -1,0 +1,359 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../js/atvScriptsPage21.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page20.css" as="style" />
+    <link rel="preload" href="../img/fundo.jpg" as="image">
+    <link rel="preload" href="../img/bgatv.jpg" as="image">
+    <link rel="preload" href="../img/parabens.png" as="image">
+    <link rel="preload" href="../img/acertou.png" as="image">
+    <link rel="preload" href="../img/errou.png" as="image">
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page21.css" />
+    <link rel="stylesheet" href="../css/atvDefault.css" />
+
+
+</head>
+
+<div class="presentation-area">
+    <div class="subTituloAtv">ATIVIDADE: Associar informações</div>
+    <div class="tituloEnunciado">
+        <div class="circuloEnunciado">2</div>
+        <div class="textoEnunciado"> Em seguida, serão apresentadas alguns problemas matemáticos. Clique no sinal correspondente ao problema e depois selecione a resposta correta. </div>
+    </div>
+    <!-- Parte1 -->
+    <div class="quadradoVerdeAtv Part1" id="quadradoVerdeAtvPart1">
+        <label for="" class="enunciadoQuadradoVerde" id="enunciadoQuadradoVerde"> A professora ANA conseguiu uma doação de 300 livros. 150 foram distribuídos e o restante ficou para a biblioteca da escola. Quandos livros a biblioteca da escola recebeu? </label>
+        <div id="nextStepAtv1" class="setinhaQuadradoVerde next naoMostra" onclick="nextStepAtv(2);">
+            <div class="camadaBranca">
+                <div class="camadaVerde">
+                    <div class="setinha"></div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="setinhaQuadradoVerdeEsquerda naoMostra" onclick="previousStepAtv(0);">
+            <div class="camadaBranca">
+                <div class="camadaVerde">
+                    <div class="setinhaEsquerda"></div>
+                </div>
+            </div>
+        </div> -->
+        <div class="tudo flexColumn">
+            <img src="../img/errou.png" alt="" class="errou naoMostra" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertou">
+            <div class="row fonteOp" id="rowOp">
+                <div class="operadorAtv" id="+">+<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="correto">-<img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="×">×<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="÷">÷<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+            </div>
+
+            <div id="alternativas" style="color: transparent;" class="alternativasAtv content bottom-outscreen-translated">
+                <div id="450" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    450
+                </div>
+
+                <div id="correto" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro">
+                    </div>
+                    150
+                </div>
+
+                <div id="450.000" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    450.000
+                </div>
+
+                <div id="2" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    2
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- parte 2
+
+    <div class="quadradoVerdeAtv Part2 naoMostra" id="quadradoVerdeAtvPart2">
+        <label for="" class="enunciadoQuadradoVerde" id="enunciadoQuadradoVerde"> Zeca está colecionando camisas de times de futebol. Ele tinha 42 camisas. Depois de participar de um torneio, conseguiu mais 18 e para incentivá-lo, seu pai lhe deu mais 15. Quantas camisas Zeca tem ao todo.</label>
+        <div id="nextStepAtv2" class="setinhaQuadradoVerde next naoMostra" onclick="nextStepAtv(3);">
+            <div class="camadaBranca">
+                <div class="camadaVerde">
+                    <div class="setinha"></div>
+                </div>
+            </div>
+        </div>
+        <div class="setinhaQuadradoVerdeEsquerda naoMostra" onclick="previousStepAtv(1);">
+            <div class="camadaBranca">
+                <div class="camadaVerde">
+                    <div class="setinhaEsquerda"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tudo flexColumn">
+            <img src="../img/errou.png" alt="" class="errou naoMostra" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertou">
+                        <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed;  transform: translate(-50%, -50%); ">
+                <style scoped>
+                    .spritesheet-animation {
+                        width: 300px;
+                        height: 300px;
+                        background-image: url("../img/parabens.png");
+                        animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+                    }
+                    
+                    .hidden {
+                        display: none!important;
+                    }
+                    
+                    @keyframes playX {
+                        from {
+                            background-position-x: 0px;
+                        }
+                        to {
+                            background-position-x: -1500px;
+                        }
+                    }
+                    
+                    @keyframes playY {
+                        from {
+                            background-position-y: 0px;
+                        }
+                        to {
+                            background-position-y: -5100px;
+                        }
+                    }
+                </style>
+                <audio preload="automatic" id="SFX-parabens" muted>
+                  <source src="../audio/parabens.mp3" type="audio/mp3" />
+                </audio>
+                <div class='spritesheet-animation'>
+
+                </div>
+            </div>
+            <div class="row fonteOp" id="rowOpP2">
+                <div class="operadorAtv" id="+">+<img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="-">-<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="×">×<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="÷">÷<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+            </div>
+
+            <div id="alternativasP2" style="color: transparent;" class="alternativasAtv content bottom-outscreen-translated">
+                <div id="75" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+                    75
+                </div>
+
+                <div id="9" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro">
+                    </div>
+                    9
+                </div>
+
+                <div id="11.240" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    11.240
+                </div>
+
+                <div id="35" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    35
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- parte 3 -->
+    <!-- <div class="quadradoVerdeAtv Part3 naoMostra" id="quadradoVerdeAtvPart3">
+        <label for="" class="enunciadoQuadradoVerde" id="enunciadoQuadradoVerde"> Lúcia doi sorteada em uma promoção e ganhou, de brinde, 900 revistinha em quadrinhos. Ela resolveu dividi-las com os 30 coleguinhas da turma. Quantas revistinhas cada um irá receber?</label>
+        <div id="nextStepAtv3" class="setinhaQuadradoVerde next naoMostra" onclick="nextStepAtv(4);">
+            <div class="camadaBranca">
+                <div class="camadaVerde">
+                    <div class="setinha"></div>
+                </div>
+            </div>
+        </div>
+        <div class="setinhaQuadradoVerdeEsquerda naoMostra" onclick="previousStepAtv(2);">
+            <div class="camadaBranca">
+                <div class="camadaVerde">
+                    <div class="setinhaEsquerda"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tudo flexColumn">
+            <img src="../img/errou.png" alt="" class="errou naoMostra" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertou">
+                        <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed;  transform: translate(-50%, -50%); ">
+                <style scoped>
+                    .spritesheet-animation {
+                        width: 300px;
+                        height: 300px;
+                        background-image: url("../img/parabens.png");
+                        animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+                    }
+                    
+                    .hidden {
+                        display: none!important;
+                    }
+                    
+                    @keyframes playX {
+                        from {
+                            background-position-x: 0px;
+                        }
+                        to {
+                            background-position-x: -1500px;
+                        }
+                    }
+                    
+                    @keyframes playY {
+                        from {
+                            background-position-y: 0px;
+                        }
+                        to {
+                            background-position-y: -5100px;
+                        }
+                    }
+                </style>
+                <audio preload="automatic" id="SFX-parabens" muted>
+                  <source src="../audio/parabens.mp3" type="audio/mp3" />
+                </audio>
+                <div class='spritesheet-animation'>
+
+                </div>
+            </div>
+            <div class="row fonteOp" id="rowOpP3">
+                <div class="operadorAtv" id="+">+<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="-">-<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="×">×<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="÷">÷<img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+            </div>
+
+            <div id="alternativasP3" style="color: transparent;" class="alternativasAtv content bottom-outscreen-translated">
+                <div id="30" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+                    30
+                </div>
+
+                <div id="300" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    300
+                </div>
+
+                <div id="3" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    3
+                </div>
+
+                <div id="600" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    600
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- parte 4 -->
+    <!-- <div class="quadradoVerdeAtv Part4 naoMostra" id="quadradoVerdeAtvPart4">
+        <label for="" class="enunciadoQuadradoVerde" id="enunciadoQuadradoVerde"> Brenda está preparando os brinquedos em 3 caixas organizadas da seguinte maneira: Uma caixa para jogos, uma caixa para bonecas, uma caixa para eletrônicos. Ao todo, ela colocou dentro de cada caixa, 18 brinquedos. Qual a quantidade total de brinquedos de Brenda?</label>
+        <div id="nextStepAtv4" class="setinhaQuadradoVerde next naoMostra" onclick="nextStepAtv(0);">
+            <div class="camadaBranca">
+                <div class="camadaVerde">
+                    <div class="setinha"></div>
+                </div>
+            </div>
+        </div>
+        <div class="setinhaQuadradoVerdeEsquerda naoMostra" onclick="previousStepAtv(3);">
+            <div class="camadaBranca">
+                <div class="camadaVerde">
+                    <div class="setinhaEsquerda"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tudo flexColumn">
+            <img src="../img/errou.png" alt="" class="errou naoMostra" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertou">
+                        <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed;  transform: translate(-50%, -50%); ">
+                <style scoped>
+                    .spritesheet-animation {
+                        width: 300px;
+                        height: 300px;
+                        background-image: url("../img/parabens.png");
+                        animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+                    }
+                    
+                    .hidden {
+                        display: none!important;
+                    }
+                    
+                    @keyframes playX {
+                        from {
+                            background-position-x: 0px;
+                        }
+                        to {
+                            background-position-x: -1500px;
+                        }
+                    }
+                    
+                    @keyframes playY {
+                        from {
+                            background-position-y: 0px;
+                        }
+                        to {
+                            background-position-y: -5100px;
+                        }
+                    }
+                </style>
+                <audio preload="automatic" id="SFX-parabens" muted>
+                  <source src="../audio/parabens.mp3" type="audio/mp3" />
+                </audio>
+                <div class='spritesheet-animation'>
+
+                </div>
+            </div>
+            <div class="row fonteOp" id="rowOpP4">
+                <div class="operadorAtv" id="+">+<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="-">-<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="×">×<img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro"></div>
+                <div class="operadorAtv" id="÷">÷<img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+            </div>
+
+            <div id="alternativasP4" style="color: transparent;" class="alternativasAtv content bottom-outscreen-translated">
+                <div id="6" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    6
+                </div>
+
+                <div id="3" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/acertou.png" alt="" class="acertou naoMostra" id="acertoOuErro">
+                    </div>
+                    3
+                </div>
+
+                <div id="30" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    30
+                </div>
+
+                <div id="54" class="alternativa">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    54
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</div>
+
+
+<!-- game -->
+<script type="text/javascript" src="../js/scripts.js"></script>
+<script type="text/javascript" src="../js/atvScriptsPage21.js"></script>
+<script type="text/javascript" src="../js/DragDropTouch.js"></script>

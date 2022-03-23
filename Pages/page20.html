@@ -1,0 +1,106 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../js/atvScriptsPage20.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page20.css" as="style" />
+    <link rel="preload" href="../img/fundo.jpg" as="image">
+    <link rel="preload" href="../img/bgatv.jpg" as="image">
+    <link rel="preload" href="../img/parabens.png" as="image">
+    <link rel="preload" href="../img/acertou.png" as="image">
+    <link rel="preload" href="../img/errou.png" as="image">
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page20.css" />
+    <link rel="stylesheet" href="../css/atvDefault.css" />
+
+
+</head>
+
+<div class="presentation-area">
+    <div class="subTituloAtv">ATIVIDADE: Reconhecer a Operação Indicada</div>
+    <div class="tituloEnunciado">
+        <div class="circuloEnunciado">1</div>
+        <div class="textoEnunciado"> Em seguida, serão apresentadas algumas operações. Clique e arraste o sinal correspondente á operação. </div>
+    </div>
+
+    <div class="quadradoVerdeAtv">
+        <div class="tudo">
+            <img src="../img/errou.png" alt="" class="errou naoMostra imagemResultado" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra imagemResultado" id="acertou">
+            <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed;  transform: translate(-50%, -50%); ">
+                <style scoped>
+                    .spritesheet-animation {
+                        width: 300px;
+                        height: 300px;
+                        background-image: url("../img/parabens.png");
+                        animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+                    }
+                    
+                    .hidden {
+                        display: none!important;
+                    }
+                    
+                    @keyframes playX {
+                        from {
+                            background-position-x: 0px;
+                        }
+                        to {
+                            background-position-x: -1500px;
+                        }
+                    }
+                    
+                    @keyframes playY {
+                        from {
+                            background-position-y: 0px;
+                        }
+                        to {
+                            background-position-y: -5100px;
+                        }
+                    }
+                </style>
+                <audio preload="automatic" id="SFX-parabens" muted>
+                  <source src="../audio/parabens.mp3" type="audio/mp3" />
+                </audio>
+                <div class='spritesheet-animation'>
+
+                </div>
+            </div>
+            <div class="coluna fonteOp">
+                <div class="draggable operador" id="+" draggable="true">+</div>
+                <div class="draggable operador" id="-" draggable="true">-</div>
+                <div class="draggable operador" id="×" draggable="true">×</div>
+                <div class="draggable operador" id="÷" draggable="true">÷</div>
+            </div>
+            <div class="coluna">
+                <div class="calculoAtv"> <label for="" style="color: transparent;">0</label> 13
+                    <div class="dropable quadradoOp" result="×"></div> 6 = 78 </div>
+                <div class="calculoAtv"> 500
+                    <div class="dropable quadradoOp" result="÷"></div> 2 = 250 </div>
+                <div class="calculoAtv"> 279
+                    <div class="dropable quadradoOp" result="-"></div> 63 = 216 </div>
+                <div class="calculoAtv"> 800
+                    <div class="dropable quadradoOp" result="+"></div> 37 = 837 </div>
+                <div class="calculoAtv"> 511
+                    <div class="dropable quadradoOp" result="+"></div> 115 = 626 </div>
+            </div>
+            <div class="coluna">
+                <div class="calculoAtv"> 400
+                    <div class="dropable quadradoOp" result="+"></div> 232 = 632 </div>
+                <div class="calculoAtv"> 509
+                    <div class="dropable quadradoOp" result="-"></div> 98 = 411 </div>
+                <div class="calculoAtv"> 600
+                    <div class="dropable quadradoOp" result="×"></div> 0 = 0 </div>
+                <div class="calculoAtv"> 333
+                    <div class="dropable quadradoOp" result="÷"></div> 3 = 111 </div>
+                <div class="calculoAtv"> <label for="" style="color: transparent;">0</label>45
+                    <div class="dropable quadradoOp" result="÷"></div> 9 = 5 </div>
+            </div>
+
+            <!-- game -->
+            <script type="text/javascript" src="../js/scripts.js"></script>
+            <script type="text/javascript" src="../js/atvScriptsPage20.js"></script>
+            <script type="text/javascript" src="../js/DragDropTouch.js"></script>

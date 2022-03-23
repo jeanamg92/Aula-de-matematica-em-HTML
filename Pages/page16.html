@@ -1,32 +1,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page16.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page16.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page16.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">DIVISÃO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+    <div class="quadradoVerde">
+        <div class="operacao">DIVISÃO</div>
+
+        <div class="click-texto opFonte">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction maisFont"> ÷ </div>
-    </div>
+            <div id='text1' style="font-family:'monospace'" class="content left-outscreen-translated noInteraction "> ÷ </div>
+        </div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text2')">
             <img src="../img/setaVerde.png" alt="" srcset="">
         </button>
-        <div id='text2' class="content left-outscreen-translated noInteraction"> Propõe uma ordem inversa á multiplicação, ou seja, sua função principal é dividir a quantidade proposta por outro número, que jamais pode ser o zero. É representada pelo sinal (÷), seus membros recebem o nome de divisor, dividendo, quociente e
-            resto. </div>
-    </div>
+            <div id='text2' style="color: transparent;" class="content left-outscreen-translated noInteraction"> Propõe uma ordem inversa à multiplicação, ou seja, sua função principal é dividir a quantidade proposta por outro número, que jamais pode ser o zero. É representada pelo sinal (÷), seus membros recebem o nome de divisor, dividendo, quociente
+                e resto. </div>
+        </div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text3').classList.remove('left-outscreen-translated');">
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text3')">
             <img src="../img/setaVerde.png" alt="" srcset="">
         </button>
-        <div id='text3' class="content left-outscreen-translated noInteraction"> Na área das exatas, tudo é certo, portanto, se o resultado não for o exato, o cálculo nunca terminará.</div>
-    </div>
-</div>
+            <div id='text3' style="color: transparent;" class="content left-outscreen-translated noInteraction"> Na área das exatas, tudo é certo, portanto, se o resultado não for o exato, o cálculo nunca terminará.</div>
+            <script>
+            </script>

@@ -1,0 +1,163 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../js/atvScriptsPage23.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page23.css" as="style" />
+    <link rel="preload" href="../img/fundo.jpg" as="image">
+    <link rel="preload" href="../img/bgatv.jpg" as="image">
+    <link rel="preload" href="../img/parabens.png" as="image">
+    <link rel="preload" href="../img/acertou.png" as="image">
+    <link rel="preload" href="../img/errou.png" as="image">
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page23.css" />
+    <link rel="stylesheet" href="../css/atvDefault.css" />
+
+
+</head>
+
+<div class="presentation-area">
+    <div class="subTituloAtv">ATIVIDADE: Identificar Termos das Operações</div>
+    <div class="tituloEnunciado">
+        <div class="circuloEnunciado">4</div>
+        <div class="textoEnunciado"> Observe as operações e arraste até cada elemento a classificação exata. </div>
+    </div>
+
+    <div class="quadradoVerdeAtv">
+        <div class="tudo">
+            <img src="../img/errou.png" alt="" class="errou naoMostra imagemResultado" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra imagemResultado" id="acertou">
+            <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed;  transform: translate(-50%, -50%); ">
+                <style scoped>
+                    .spritesheet-animation {
+                        width: 300px;
+                        height: 300px;
+                        background-image: url("../img/parabens.png");
+                        animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+                    }
+                    
+                    .hidden {
+                        display: none!important;
+                    }
+                    
+                    @keyframes playX {
+                        from {
+                            background-position-x: 0px;
+                        }
+                        to {
+                            background-position-x: -1500px;
+                        }
+                    }
+                    
+                    @keyframes playY {
+                        from {
+                            background-position-y: 0px;
+                        }
+                        to {
+                            background-position-y: -5100px;
+                        }
+                    }
+                </style>
+                <audio preload="automatic" id="SFX-parabens" muted>
+                  <source src="../audio/parabens.mp3" type="audio/mp3" />
+                </audio>
+                <div class='spritesheet-animation'>
+
+                </div>
+            </div>
+
+            <div class="colunaElementos">
+                <div class="quadradoElementos draggable" draggable="true" id="Subtraendo">Subtraendo</div>
+                <div class="quadradoElementos draggable" draggable="true" id="Divisor">Divisor</div>
+                <div class="quadradoElementos draggable" draggable="true" id="Produto">Produto</div>
+                <div class="quadradoElementos draggable" draggable="true" id="Resto">Resto</div>
+                <div class="quadradoElementos draggable" draggable="true" id="Diferençaouresto">Diferença ou resto</div>
+                <div class="quadradoElementos draggable" draggable="true" id="Multiplicador">Multiplicador</div>
+                <div class="quadradoElementos draggable" draggable="true" id="Multiplicando">Multiplicando</div>
+                <div class="quadradoElementos draggable" draggable="true" id="primeiraParcela">1ª Parcela</div>
+                <div class="quadradoElementos draggable" draggable="true" id="segundaParcela">2ª Parcela</div>
+                <div class="quadradoElementos draggable" draggable="true" id="Resultado">Resultado</div>
+                <div class="quadradoElementos draggable" draggable="true" id="SomaouTotal">Soma ou Total</div>
+                <div class="quadradoElementos draggable" draggable="true" id="Minuendo">Minuendo</div>
+                <div class="quadradoElementos draggable" draggable="true" id="Dividendo">Dividendo</div>
+                <div class="quadrado naoMostra" id=""></div>
+
+            </div>
+
+            <div class="colunaoperacoes">
+                <div class="operacoes content" id="1">
+                    <div class="first row">
+                        <label for="" style="color: transparent;">0</label> 241
+                        <div class="quadrado quadradoOp dropable" id="primeiraParcela"></div>
+                    </div>
+                    <div class="row">
+                        <label for="" class="second">+ 322</label>
+                        <div class="quadrado quadradoOp dropable" id="segundaParcela"></div>
+                    </div>
+                    <div class="resultado row">
+                        <label for="" style="color: transparent;">0</label>563
+                        <div class="quadrado quadradoOp dropable" id="SomaouTotal"></div>
+                    </div>
+                </div>
+
+                <div class="transparent operacoes content bottom-outscreen-translated" id="2">
+                    <div class="first row">
+                        <label for="" style="color: transparent;">0</label> 693
+                        <div class="quadrado quadradoOp dropable" id="Minuendo"></div>
+                    </div>
+                    <div class="row">
+                        <label for="" class="second">- 214</label>
+                        <div class="quadrado quadradoOp dropable" id="Subtraendo"></div>
+                    </div>
+                    <div class="resultado row">
+                        <label for="" style="color: transparent;">0</label>479
+                        <div class="quadrado quadradoOp dropable" id="Diferençaouresto"></div>
+                    </div>
+                </div>
+
+                <div class="transparent operacoes content bottom-outscreen-translated" id="3">
+                    <div class="first row">361
+                        <div class="quadrado quadradoOp dropable" id="Multiplicando"></div>
+                    </div>
+                    <div class="row">
+                        <label for="" class="second">x <label for="" style="color: transparent;">0</label> 2</label>
+                        <div class="quadrado quadradoOp dropable" id="Multiplicador"></div>
+                    </div>
+                    <div class="resultado row">
+                        <label for="" style="color: transparent;">0</label>722
+                        <div class="quadrado quadradoOp dropable" id="Produto"></div>
+                    </div>
+                </div>
+
+                <div class="transparent operacoes content bottom-outscreen-translated operacoesDivisao" id="4">
+                    <div class="row">
+                        <div class="dividendo dropable quadrado" id="Dividendo"></div>
+                        <div class="divisorTexto semBorda fontBold">45</div>
+                        <div class="divisorTexto fontBold">5</div>
+                        <div class="divisor dropable quadrado" id="Divisor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="dropable quadrado" style="border: transparent;" id=""></div>
+                        <div class="divisorTexto divisorBaixo">-45</div>
+                        <div class="divisorTexto semBorda fontBold">9</div>
+                        <div class="dropable quadrado" id="Resultado"></div>
+                    </div>
+                    <div class="row">
+                        <div class="dropable quadrado" style="border: transparent;" id=""></div>
+                        <div class="divisorTexto semBorda fontBold">0</div>
+                        <div class="divisorTexto semBorda" style="color: transparent;">0</div>
+                        <div class="resto dropable quadrado" id="Resto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- game -->
+    <script type="text/javascript" src="../js/scripts.js"></script>
+    <script type="text/javascript" src="../js/atvScriptsPage23.js"></script>
+    <script type="text/javascript" src="../js/DragDropTouch.js"></script>

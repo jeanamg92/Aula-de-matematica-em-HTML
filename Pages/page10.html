@@ -1,24 +1,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page10.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page10.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page10.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">MULTIPLICAÇÂO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+    <div class="quadradoVerde">
+        <div class="operacao">MULTIPLICAÇÃO</div>
+
+        <div class="click-texto opFonte">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction maisFont"> × </div>
-    </div>
+            <div id='text1' class="content left-outscreen-translated noInteraction "> × </div>
+        </div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text2').classList.remove('left-outscreen-translated');">
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text2')">
             <img src="../img/setaVerde.png" alt="" srcset="">
         </button>
-        <div id='text2' class="content left-outscreen-translated noInteraction"> Conhecida pelo sinal de <b>×</b> esta operação é indicada para o adicionamento de números em igualdade de ordem finita, ou seja, multiplicando-se um número vezes outro, você obterá o resultado final que é chamado de produto. </div>
-    </div>
-</div>
+            <div id='text2' style="color: transparent;" class="content left-outscreen-translated noInteraction"> Conhecida pelo sinal de <b>X</b> esta operação é indicada para o adicionamento de números em igualdade de ordem finita, ou seja, multiplicando-se um número vezes outro, você obterá o resultado final que é chamado de produto. </div>
+            <script>
+            </script>

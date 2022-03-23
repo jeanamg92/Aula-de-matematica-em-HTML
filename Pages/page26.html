@@ -1,0 +1,128 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <!-- <link rel="preload" href="../js/atvScriptsPage26.js" as="script"> -->
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page26.css" as="style" />
+    <link rel="preload" href="../img/fundo.jpg" as="image">
+    <link rel="preload" href="../img/bgatv.jpg" as="image">
+
+    <link rel="preload" href="../img/parabens.png" as="image">
+    <link rel="preload" href="../img/acertou.png" as="image">
+    <link rel="preload" href="../img/errou.png" as="image">
+
+    <link rel="preload" href="../img/acertouRobo.png" as="image">
+    <link rel="preload" href="../img/atencao.png" as="image">
+    <link rel="preload" href="../img/cara1.png" as="image">
+    <link rel="preload" href="../img/excla.png" as="image">
+    <link rel="preload" href="../img/fogo.png" as="image">
+    <link rel="preload" href="../img/pense.png" as="image">
+    <link rel="preload" href="../img/robot_face1.png" as="image">
+    <link rel="preload" href="../img/robo.png" as="image">
+    <link rel="preload" href="../img/mosca.png" as="image">
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page26.css" />
+    <link rel="stylesheet" href="../css/atvDefault.css" />
+
+
+</head>
+
+<div class="presentation-area">
+    <div class="subTituloAtv">ATIVIDADE: Interpretar informações</div>
+    <div class="tituloEnunciado">
+        <div class="circuloEnunciado">7</div>
+        <div class="textoEnunciado"> Leia as questões, clique na resposta correta e some pontos.</div>
+    </div>
+
+    <div class="quadradoVerdeAtv">
+        <div class="tudo">
+            <img src="../img/errou.png" alt="" class="errou naoMostra imagemResultado" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra imagemResultado" id="acertou">
+            <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed;  transform: translate(-50%, -50%); ">
+                <style scoped>
+                    .spritesheet-animation {
+                        width: 300px;
+                        height: 300px;
+                        background-image: url("../img/parabens.png");
+                        animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+                    }
+                    
+                    .hidden {
+                        display: none!important;
+                    }
+                    
+                    @keyframes playX {
+                        from {
+                            background-position-x: 0px;
+                        }
+                        to {
+                            background-position-x: -1500px;
+                        }
+                    }
+                    
+                    @keyframes playY {
+                        from {
+                            background-position-y: 0px;
+                        }
+                        to {
+                            background-position-y: -5100px;
+                        }
+                    }
+                </style>
+                <audio preload="automatic" id="SFX-parabens" muted>
+                  <source src="../audio/parabens.mp3" type="audio/mp3" />
+                </audio>
+                <div class='spritesheet-animation'>
+
+                </div>
+            </div>
+            <div class="pontos"> <span>0</span></div>
+            <div id="nextStepAtv1" class="setinhaQuadradoVerde next naoMostra" onclick="nextPageAtv30();">
+                <div class="camadaBranca">
+                    <div class="camadaVerde">
+                        <div class="setinha"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="perguntaEresposta" id="perguntaEresposta">
+                <div class="enunciado" id="enunciadoQuadradoVerde">Em relação à matemática, é correto afirmar que:</div>
+                <div class="alternativa primeira" id="correto">
+                    <div class="circuloAlternativa"><img src="../img/acertou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    <span> É a ciência que pode ser calculada através do raciocínio rápido e lógico.</span>
+                </div>
+                <div class="alternativa segunda">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    <span> É a ciência que pode ser calculada somente através de um resultado fixo sem variações.</span>
+                </div>
+                <div class="alternativa terceira">
+                    <div class="circuloAlternativa"><img src="../img/errou.png" alt="" class="errou naoMostra" id="acertoOuErro"></div>
+                    <span> É a ciência que combina resultados, sem variações <br> em uma determinante.</span>
+                </div>
+            </div>
+
+            <div class="robo">
+                <div class="cara" id="caraDiv"><img id="cara" src="../img/robot_face1.png" alt="" srcset=""></div>
+
+                <!-- <div class="cara content up-outscreen-robo naoMostra" id="caraErro"><img src="../img/excla.png" alt="" srcset="" id="caraErro"></div>
+                <div class="cara content up-outscreen-robo naoMostra" id="caraErro"><img src="../img/cara1.png" alt="" srcset="" id="caraErro2"></div>
+                <div class="cara content up-outscreen-robo naoMostra" id="caraErro"><img src="../img/atencao.png" alt="" srcset="" id="caraErro3"></div>
+                <div class="cara content up-outscreen-robo naoMostra" id="caraErro"><img src="../img/pense.png" alt="" srcset="" id="caraErro4"></div>
+
+                <div class="cara content up-outscreen-robo naoMostra" id="caraAcerto"><img src="../img/acertou.png" alt="" srcset="" id="caraAcerto"></div>
+                <div class="cara content up-outscreen-robo naoMostra" id="caraAcerto"><img src="../img/mosca.png" alt="" srcset="" id="caraAcerto2"></div> -->
+                <img src="../img/robo.png" alt="" srcset="">
+                <div class="fogo"></div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- game -->
+    <script type="text/javascript" src="../js/scripts.js"></script>
+    <script type="text/javascript" src="../js/atvScriptsPage26.js"></script>
+    <script type="text/javascript" src="../js/DragDropTouch.js"></script>

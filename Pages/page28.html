@@ -1,0 +1,149 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <!-- <link rel="preload" href="../js/atvScriptspage28.js" as="script"> -->
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page28.css" as="style" />
+    <link rel="preload" href="../img/fundo.jpg" as="image">
+    <link rel="preload" href="../img/bgatv.jpg" as="image">
+
+    <link rel="preload" href="../img/parabens.png" as="image">
+    <link rel="preload" href="../img/acertou.png" as="image">
+    <link rel="preload" href="../img/errou.png" as="image">
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page28.css" />
+    <link rel="stylesheet" href="../css/atvDefault.css" />
+
+
+</head>
+
+<div class="presentation-area">
+    <div class="subTituloAtv">ATIVIDADE: Desenvolver o Raciocínio Lógico</div>
+    <div class="tituloEnunciado">
+        <div class="circuloEnunciado">9</div>
+        <div class="textoEnunciado"> Clique na bolinha e percorra o caminho correto para que ela chegue ao valor 193.</div>
+    </div>
+
+    <div class="quadradoVerdeAtv">
+        <div class="tudo">
+            <img src="../img/errou.png" alt="" class="errou naoMostra imagemResultado" id="errou">
+            <img src="../img/acertou.png" alt="" class="acertou naoMostra imagemResultado" id="acertou">
+            <div id='parabens-wrapper' class='parabens-wrapper hidden' style="z-index: 999; opacity: 1; position: fixed;  transform: translate(-50%, -50%); ">
+                <style scoped>
+                    .spritesheet-animation {
+                        width: 300px;
+                        height: 300px;
+                        background-image: url("../img/parabens.png");
+                        animation: playX 0.25s steps(5) 17, playY 4.25s steps(17) 1;
+                    }
+                    
+                    .hidden {
+                        display: none!important;
+                    }
+                    
+                    @keyframes playX {
+                        from {
+                            background-position-x: 0px;
+                        }
+                        to {
+                            background-position-x: -1500px;
+                        }
+                    }
+                    
+                    @keyframes playY {
+                        from {
+                            background-position-y: 0px;
+                        }
+                        to {
+                            background-position-y: -5100px;
+                        }
+                    }
+                </style>
+                <audio preload="automatic" id="SFX-parabens" muted>
+                  <source src="../audio/parabens.mp3" type="audio/mp3" />
+                </audio>
+                <div class='spritesheet-animation'>
+
+                </div>
+            </div>
+            <div class="coluna coluna1">
+
+            </div>
+
+            <div class="linha linha1"></div>
+            <div class="linha linha2"></div>
+            <div class="linha linha3"></div>
+            <div class="linha linha4"></div>
+            <div class="linha linha5"></div>
+            <div class="linha linha6"></div>
+            <div class="linha linha7"></div>
+            <div class="linha linha8"></div>
+            <div class="linha linha9"></div>
+            <div class="linha linha10"></div>
+            <div class="linha linha11"></div>
+            <div class="linha linha12"></div>
+            <div class="linha linha13"></div>
+
+            <div id="bolaResult" valor="10" class="bolaAnda">10</div>
+
+            <div id="bola0" class="bola bola0"></div>
+            <div id="bola1" op="*" valor="2" style="pointer-events: 'auto';" class="bola bola1P">x 2</div>
+            <div id="bola2" op="/" valor="2" class="bola bola2P">÷ 2</div>
+            <div id="bola3" op="*" valor="2" class="bola bola3P">x 2</div>
+            <div id="bola4" op="/" valor="2" class="bola bola4P">÷ 2</div>
+            <div id="bola5" op="*" valor="10" class="bola bola5P">x 10</div>
+            <div id="bola6" op="*" valor="2" class="bola bola6P">x 2</div>
+            <div id="bola7" op="*" valor="10" class="bola bola7P">x 10</div>
+            <div id="bola8" op="/" valor="5" class="bola bola8P">÷ 5</div>
+            <div id="bola9" op="/" valor="4" class="bola bola9P">÷ 4</div>
+            <div id="bola10" op="*" valor="10" class="bola bola10P">x 10</div>
+            <div id="bola11" op="-" valor="9" class="bola bola11P">- 9</div>
+            <div id="bola12" op="-" valor="8" class="bola bola12P">- 8</div>
+            <div id="bola13" op="-" valor="7" class="bola bola13P">- 7</div>
+            <div class="coluna">
+                <!-- <div id="bola1" op="*" valor="2" style="pointer-events: 'auto';" class="bola">x 2</div> -->
+            </div>
+
+            <div class="coluna coluna2">
+                <!-- <div id="bola2" op="/" valor="2" class="bola">÷ 2</div>
+                <div id="bola3" op="*" valor="2" class="bola">x 2</div>
+                <div id="bola4" op="/" valor="2" class="bola">÷ 2</div> -->
+            </div>
+            <div class="coluna coluna3">
+                <!-- <div id="bola5" op="*" valor="10" class="bola">x 10</div>
+                <div id="bola6" op="*" valor="2" class="bola">x 2</div>
+                <div id="bola7" op="*" valor="10" class="bola">x 10</div> -->
+            </div>
+            <div class="coluna">
+                <!-- <div id="bola8" op="/" valor="5" class="bola">÷ 5</div>
+                <div id="bola9" op="/" valor="4" class="bola">÷ 4</div> -->
+            </div>
+            <div class="coluna">
+                <!-- <div id="bola10" op="*" valor="10" class="bola">x 10</div> -->
+            </div>
+            <div class="coluna">
+                <!-- <div id="bola11" op="-" valor="9" class="bola bola11">- 9</div> -->
+                <!-- <div id="bola12" op="-" valor="8" class="bola">- 8</div> -->
+                <!-- <div id="bola13" op="-" valor="7" class="bola">- 7</div> -->
+            </div>
+            <div class="coluna">
+                <div id="bolaFinal" class="bolaFinal bola">193</div>
+            </div>
+            <div class="calculo" id="calculo" onclick="reset();"> Reiniciar
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="undo" class="svg-inline--fa fa-undo fa-w-16" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M212.333 224.333H12c-6.627 0-12-5.373-12-12V12C0 5.373 5.373 0 12 0h48c6.627 0 12 5.373 12 12v78.112C117.773 39.279 184.26 7.47 258.175 8.007c136.906.994 246.448 111.623 246.157 248.532C504.041 393.258 393.12 504 256.333 504c-64.089 0-122.496-24.313-166.51-64.215-5.099-4.622-5.334-12.554-.467-17.42l33.967-33.967c4.474-4.474 11.662-4.717 16.401-.525C170.76 415.336 211.58 432 256.333 432c97.268 0 176-78.716 176-176 0-97.267-78.716-176-176-176-58.496 0-110.28 28.476-142.274 72.333h98.274c6.627 0 12 5.373 12 12v48c0 6.627-5.373 12-12 12z"/></svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- game -->
+<script type="text/javascript" src="../js/scripts.js"></script>
+<script type="text/javascript" src="../js/atvScriptspage28.js"></script>
+<script type="text/javascript" src="../js/DragDropTouch.js"></script>

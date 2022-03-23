@@ -1,24 +1,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/canvasDefault.css">
-    <link rel="stylesheet" href="../css/page13.css">
+    <link rel="preload" href="../js/scripts.js" as="script">
+    <link rel="preload" href="../css/canvasDefault.css" as="style" />
+    <link rel="preload" href="../css/default.css" as="style" />
+    <link rel="preload" href="../css/page13.css" as="style" />
+
+    <link rel="stylesheet" href="../css/canvasDefault.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/page13.css" />
+    <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
 
 <div class="presentation-area">
-    <div class="operacao">PROPRIEDADES DA MULTIPLICAÇÃO</div>
+    <div class="subTitulo">INTRODUÇÃO</div>
 
-    <div class="click-texto">
-        <button class="click-anim" type='button' onclick="document.getElementById('text1').classList.remove('left-outscreen-translated');">
+    <div class="quadradoVerde">
+        <div class="operacao">PROPRIEDADES DA MULTIPLICAÇÃO</div>
+
+        <div class="click-texto">
+            <button class="click-anim" type='button' onclick="retiraClasse('text1')">
         <img src="../img/setaVerde.png" alt="" srcset="">
     </button>
-        <div id='text1' class="content left-outscreen-translated noInteraction calculosPai">
-            <div class="tipo">Elemento Nulo</div>
-            <div class="enunciado">Segundo a propriedade do elemento <b>nulo</b> sempre que multiplicarmos qualquer número pelo elemento nulo, o resultado será zero! Você sabe quem é o elemento nulo? É o próprio <b>zero</b>. qualquer número multiplicado por zero sempre terá
-                o produto igual a zero.</div>
-            <div class="calculoCenter">
-                2 x 0 = 0<br>0 x 5 = 0<br>7 x 0 x 2 = 0<br>12.345 x 0 = 0<br>
+            <div id='text1' style="color: transparent;" class="content left-outscreen-translated noInteraction calculosPai">
+                <div class="tipo">Elemento Nulo</div>
+                <div class="enunciado">Segundo a propriedade do elemento <b>nulo</b> sempre que multiplicarmos qualquer número pelo elemento nulo, o resultado será zero! Você sabe quem é o elemento nulo? É o próprio <b>zero</b>. qualquer número multiplicado por zero sempre
+                    terá o produto igual a zero.</div>
+                <div class="calculoCenter">
+                    2 x 0 = 0<br>0 x 5 = 0<br>7 x 0 x 2 = 0<br>12.345 x 0 = 0<br>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
+            <script>
+            </script>
